@@ -1,11 +1,10 @@
 from collections import defaultdict
 
 from paxos.messages import *
+from paxos.trackfile import useless_messages
 
 
 class BasicPaxosProtocol:
-
-    useless_messages = 0
 
     def __init__(self, agent):
         self.agent = agent
@@ -74,7 +73,7 @@ class BasicPaxosProposerProtocol(BasicPaxosProtocol):
         accept messages to acceptors.
         """
         if msg.source in self.prepare_responders:
-            self.useless_messages += 1
+            useless_messages += 1
         self.prepare_responders.add(msg.source)
         self.tally_inbound_msgs(msg.source)
         if msg.highest_proposal.number > self.highest_proposal_from_promises.number:
@@ -103,7 +102,7 @@ class BasicPaxosProposerProtocol(BasicPaxosProtocol):
 
     def handle_accept_response(self, msg):
         if msg.source in self.accept_responders:
-            self.useless_messages += 1
+            useless_messages += 1
         self.accept_responders.add(msg.source)
         self.tally_inbound_msgs(msg.source)
         if self.have_acceptor_majority(self.accept_responders):
@@ -123,7 +122,7 @@ class BasicPaxosAcceptorProtocol(BasicPaxosProtocol):
                                           self.highest_proposal_accepted)
             self.agent.send_message(next_msg, [msg.source])
         else:
-            self.useless_messages += 1
+            useless_messages += 1
         # Optimization: send proposer a reject message because another proposer
         # has already initiated a proposal with a higher number.
         #else:
@@ -140,7 +139,7 @@ class BasicPaxosAcceptorProtocol(BasicPaxosProtocol):
             self.agent.send_message(next_msg,
                               [msg.source] + list(self.agent.config.learner_ids))
         else:
-            self.useless_messages += 1
+            useless_messages += 1
 
 
 class BasicPaxosLearnerProtocol(BasicPaxosProtocol):
@@ -157,10 +156,10 @@ class BasicPaxosLearnerProtocol(BasicPaxosProtocol):
         self.accept_responders[msg.proposal.value].add(msg.source)
         # Don't do anything if we've already logged the result.
         if self.state == self.RESULT_SENT:
-            self.useless_messages += 1
+            useless_messages += 1
             return
         if self.have_acceptor_majority(self.accept_responders[msg.proposal.value]):
             self.agent.log_result(msg)
             self.state = self.RESULT_SENT
         else:
-            self.useless_messages += 1
+            useless_messages += 1

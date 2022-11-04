@@ -6,6 +6,7 @@ import time
 from paxos import SystemConfig
 from paxos.messages import *
 from paxos.sim import System, Mailbox
+from paxos.trackfile import useless_messages
 
 
 class DebugMailbox(Mailbox):
@@ -190,6 +191,8 @@ def test_multi_paxos():
     system.shutdown_agents()
     print(f"---- Finish client requests and shutdown : {time.time()-start_time} seconds")
     print(f"---- Total messages sent/received : {system.mailbox.total_messages} messages ----")
+    print(f"---- Total useful messages sent/received : {system.mailbox.total_messages-useless_messages} messages ----")
+    print(f"---- Total useless messages sent/received : {useless_messages} messages ----")
     system.logger.print_results()
     #print(system.print_sent_messages())
     # Overhead: shutting down
