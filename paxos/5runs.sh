@@ -8,7 +8,7 @@ do
     echo "TEST $i"
     python test.py > output.txt
     grep "Number of nodes:" output.txt
-    grep "seconds" output.txt
+    grep "seconds\|messages" output.txt
     echo "================================"
     sleep 4
 done

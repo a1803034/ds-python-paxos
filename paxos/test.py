@@ -14,6 +14,9 @@ class DebugMailbox(Mailbox):
     that they can be later verified.
     """
 
+    # Class variable for tracking number of messages that has entered mailboxes
+    total_messages = 0
+
     def __init__(self, *args, **kwargs):
         super(DebugMailbox, self).__init__(*args, **kwargs)
         self.num_sent = 0
@@ -29,6 +32,7 @@ class DebugMailbox(Mailbox):
 
     def send(self, to, msg):
         super(DebugMailbox, self).send(to, msg)
+        self.total_messages += 1
         self.num_sent += 1
         if self.config.debug_messages:
             source = getattr(msg, 'source', None)
@@ -168,8 +172,8 @@ def test_multi_paxos():
     # Overhead: setup
     start_time = time.time()
     system = DebugSystem(config)
-    system.start()
     print(f"---- Overhead: setup: {time.time()-start_time} seconds ----")
+    system.start()
 
     # Sending client requests to lower Paxos
     start_time = time.time()
@@ -179,13 +183,17 @@ def test_multi_paxos():
         to = 0
         system.mailbox.send(to, ClientRequestMsg(None, "Query {}".format(x)))
         time.sleep(random.random()/10)
-    print(f"---- Client requests : {time.time()-start_time} seconds ----")
+    print(f"---- Sending client requests : {time.time()-start_time} seconds ----")
 
-    # Overhead: shutting down
+    # Finish client requests and shutdown
     start_time = time.time()
     system.shutdown_agents()
+    print(f"---- Finish client requests and shutdown : {time.time()-start_time} seconds")
+    print(f"---- Total messages sent/received : {system.mailbox.total_messages} messages ----")
     system.logger.print_results()
     #print(system.print_sent_messages())
+    # Overhead: shutting down
+    start_time = time.time()
     system.quit()
     print(f"---- Overhead: teardown : {time.time()-start_time} seconds ----")
     import sys
