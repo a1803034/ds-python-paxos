@@ -45,7 +45,12 @@ class Mailbox:
             except queue.Empty:
                 pass
             else:
-                self.inbox[dest].put(msg)
+                # 10% chance to lose message
+                #     Don't lose quit messages
+                if True and random.randint(1, 10) > 1:
+                    self.inbox[dest].put(msg)
+                else:
+                    print("Message lost")
         print("Mailbox shutting down")
 
     def send(self, to, msg):

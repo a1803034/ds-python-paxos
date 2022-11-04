@@ -32,10 +32,6 @@ class DebugMailbox(Mailbox):
                                 AcceptResponseMsg))
 
     def send(self, to, msg):
-        # 10% chance to not do anything at all
-        if random.randint(1, 10) == 1:
-            print("Lost message!")
-            return
         super(DebugMailbox, self).send(to, msg)
         self.total_messages += 1
         self.num_sent += 1
@@ -169,7 +165,7 @@ def test_paxos2():
     system.mailbox.send(0,ClientRequestMsg(None, "Query {}".format(2)))
 
 def test_multi_paxos():
-    testing_number = 80
+    testing_number = 3
     print(f"Number of nodes: {testing_number}")
     config = SystemConfig(testing_number, testing_number, testing_number)
     # This above means 3 proposers, 3 acceptors and 3 learners
