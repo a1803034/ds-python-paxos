@@ -32,6 +32,10 @@ class DebugMailbox(Mailbox):
                                 AcceptResponseMsg))
 
     def send(self, to, msg):
+        # 10% chance to not do anything at all
+        if random.randint(1, 10) == 1:
+            print("Lost message!")
+            return
         super(DebugMailbox, self).send(to, msg)
         self.total_messages += 1
         self.num_sent += 1

@@ -55,9 +55,7 @@ class Mailbox:
         # Funnel all messages through a primary queue so that we can keep track
         # of when we are done (i.e. all messages are processed).
         self.message_count += 1
-        # 10% chance of losing message
-        if True and random.randint(1, 10) > 1:
-            self.funnel.put((to, msg))
+        self.funnel.put((to, msg))
 
     def recv(self, from_):
         """
