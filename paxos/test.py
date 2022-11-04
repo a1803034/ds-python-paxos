@@ -160,25 +160,39 @@ def test_paxos2():
     system.mailbox.send(0,ClientRequestMsg(None, "Query {}".format(2)))
 
 def test_multi_paxos():
-    config = SystemConfig(3, 3, 3)
+    testing_number = 80
+    print(f"Number of nodes: {testing_number}")
+    config = SystemConfig(testing_number, testing_number, testing_number)
+    # This above means 3 proposers, 3 acceptors and 3 learners
+
+    # Overhead: setup
+    start_time = time.time()
     system = DebugSystem(config)
     system.start()
+    print(f"---- Overhead: setup: {time.time()-start_time} seconds ----")
 
+    # Sending client requests to lower Paxos
+    start_time = time.time()
     for x in range(20):
         # Always send to the same proposer, effectively using that proposer as
         # the leader.
         to = 0
         system.mailbox.send(to, ClientRequestMsg(None, "Query {}".format(x)))
         time.sleep(random.random()/10)
+    print(f"---- Client requests : {time.time()-start_time} seconds ----")
 
+    # Overhead: shutting down
+    start_time = time.time()
     system.shutdown_agents()
     system.logger.print_results()
     #print(system.print_sent_messages())
     system.quit()
+    print(f"---- Overhead: teardown : {time.time()-start_time} seconds ----")
     import sys
     sys.exit()
 
 if __name__ == "__main__":
+    print("Modified version for finding runtime") # CUSTOM
     test_multi_paxos()
     system = System(SystemConfig(1, 1, 1))
     #system = DebugSystem(SystemConfig(2, 3, 2, proposer_sequence_start=1,
