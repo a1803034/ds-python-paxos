@@ -6,7 +6,7 @@ import time
 from paxos import SystemConfig
 from paxos.messages import *
 from paxos.sim import System, Mailbox
-from paxos.trackfile import useless_messages
+from trackfile import useless_messages
 
 
 class DebugMailbox(Mailbox):
