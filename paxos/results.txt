@@ -1,0 +1,320 @@
+Paxos: Runtime
+
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 3
+---- Overhead: setup: 0.012363910675048828 seconds ----
+---- Client requests : 1.0766754150390625 seconds ----
+---- Overhead: teardown : 2.0074291229248047 seconds ----
+================================
+TEST 2
+Number of nodes: 3
+---- Overhead: setup: 0.01213836669921875 seconds ----
+---- Client requests : 0.9761824607849121 seconds ----
+---- Overhead: teardown : 2.0109541416168213 seconds ----
+================================
+TEST 3
+Number of nodes: 3
+---- Overhead: setup: 0.014641523361206055 seconds ----
+---- Client requests : 0.9074938297271729 seconds ----
+---- Overhead: teardown : 2.0098040103912354 seconds ----
+================================
+TEST 4
+Number of nodes: 3
+---- Overhead: setup: 0.012483835220336914 seconds ----
+---- Client requests : 0.9948444366455078 seconds ----
+---- Overhead: teardown : 2.013577699661255 seconds ----
+================================
+TEST 5
+Number of nodes: 3
+---- Overhead: setup: 0.011873722076416016 seconds ----
+---- Client requests : 1.0220177173614502 seconds ----
+---- Overhead: teardown : 2.0148305892944336 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 4
+---- Overhead: setup: 0.013583183288574219 seconds ----
+---- Client requests : 0.9489774703979492 seconds ----
+---- Overhead: teardown : 2.00669264793396 seconds ----
+================================
+TEST 2
+Number of nodes: 4
+---- Overhead: setup: 0.014068126678466797 seconds ----
+---- Client requests : 1.0562949180603027 seconds ----
+---- Overhead: teardown : 2.008251905441284 seconds ----
+================================
+TEST 3
+Number of nodes: 4
+---- Overhead: setup: 0.01559138298034668 seconds ----
+---- Client requests : 1.024122953414917 seconds ----
+---- Overhead: teardown : 2.0132598876953125 seconds ----
+================================
+TEST 4
+Number of nodes: 4
+---- Overhead: setup: 0.015892744064331055 seconds ----
+---- Client requests : 1.1374468803405762 seconds ----
+---- Overhead: teardown : 2.0164175033569336 seconds ----
+================================
+TEST 5
+Number of nodes: 4
+---- Overhead: setup: 0.01732611656188965 seconds ----
+---- Client requests : 1.1004211902618408 seconds ----
+---- Overhead: teardown : 2.0127975940704346 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 6
+---- Overhead: setup: 0.017627239227294922 seconds ----
+---- Client requests : 0.8941154479980469 seconds ----
+---- Overhead: teardown : 2.013880729675293 seconds ----
+================================
+TEST 2
+Number of nodes: 6
+---- Overhead: setup: 0.018366098403930664 seconds ----
+---- Client requests : 1.1537845134735107 seconds ----
+---- Overhead: teardown : 2.010324478149414 seconds ----
+================================
+TEST 3
+Number of nodes: 6
+---- Overhead: setup: 0.020213842391967773 seconds ----
+---- Client requests : 0.8156237602233887 seconds ----
+---- Overhead: teardown : 2.512986421585083 seconds ----
+================================
+TEST 4
+Number of nodes: 6
+---- Overhead: setup: 0.017628908157348633 seconds ----
+---- Client requests : 0.8062350749969482 seconds ----
+---- Overhead: teardown : 2.5122950077056885 seconds ----
+================================
+TEST 5
+Number of nodes: 6
+---- Overhead: setup: 0.017806053161621094 seconds ----
+---- Client requests : 1.0379703044891357 seconds ----
+---- Overhead: teardown : 2.5111796855926514 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 8
+---- Overhead: setup: 0.022293567657470703 seconds ----
+---- Client requests : 1.0961098670959473 seconds ----
+---- Overhead: teardown : 2.017660617828369 seconds ----
+================================
+TEST 2
+Number of nodes: 8
+---- Overhead: setup: 0.021311283111572266 seconds ----
+---- Client requests : 1.0922129154205322 seconds ----
+---- Overhead: teardown : 2.5129575729370117 seconds ----
+================================
+TEST 3
+Number of nodes: 8
+---- Overhead: setup: 0.021120309829711914 seconds ----
+---- Client requests : 1.1037302017211914 seconds ----
+---- Overhead: teardown : 2.5163896083831787 seconds ----
+================================
+TEST 4
+Number of nodes: 8
+---- Overhead: setup: 0.021840810775756836 seconds ----
+---- Client requests : 1.181267499923706 seconds ----
+---- Overhead: teardown : 2.0144360065460205 seconds ----
+================================
+TEST 5
+Number of nodes: 8
+---- Overhead: setup: 0.02135324478149414 seconds ----
+---- Client requests : 1.0886526107788086 seconds ----
+---- Overhead: teardown : 2.012406826019287 seconds ----
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 12
+---- Overhead: setup: 0.039859771728515625 seconds ----
+---- Client requests : 1.2856249809265137 seconds ----
+---- Overhead: teardown : 2.0120925903320312 seconds ----
+================================
+TEST 2
+Number of nodes: 12
+---- Overhead: setup: 0.03355598449707031 seconds ----
+---- Client requests : 1.1591594219207764 seconds ----
+---- Overhead: teardown : 2.535946846008301 seconds ----
+================================
+TEST 3
+Number of nodes: 12
+---- Overhead: setup: 0.029912948608398438 seconds ----
+---- Client requests : 0.968134880065918 seconds ----
+---- Overhead: teardown : 2.534339666366577 seconds ----
+================================
+TEST 4
+Number of nodes: 12
+---- Overhead: setup: 0.038269758224487305 seconds ----
+---- Client requests : 0.9690032005310059 seconds ----
+---- Overhead: teardown : 2.53760027885437 seconds ----
+================================
+TEST 5
+Number of nodes: 12
+---- Overhead: setup: 0.041455984115600586 seconds ----
+---- Client requests : 1.0264291763305664 seconds ----
+---- Overhead: teardown : 2.013021230697632 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 16
+---- Overhead: setup: 0.04021906852722168 seconds ----
+---- Client requests : 0.8688905239105225 seconds ----
+---- Overhead: teardown : 3.047914743423462 seconds ----
+================================
+TEST 2
+Number of nodes: 16
+---- Overhead: setup: 0.04302787780761719 seconds ----
+---- Client requests : 0.9446978569030762 seconds ----
+---- Overhead: teardown : 3.0234439373016357 seconds ----
+================================
+TEST 3
+Number of nodes: 16
+---- Overhead: setup: 0.03882598876953125 seconds ----
+---- Client requests : 1.2854340076446533 seconds ----
+---- Overhead: teardown : 3.0405068397521973 seconds ----
+================================
+TEST 4
+Number of nodes: 16
+---- Overhead: setup: 0.03921818733215332 seconds ----
+---- Client requests : 1.0266380310058594 seconds ----
+---- Overhead: teardown : 3.0246777534484863 seconds ----
+================================
+TEST 5
+Number of nodes: 16
+---- Overhead: setup: 0.03914999961853027 seconds ----
+---- Client requests : 1.040283203125 seconds ----
+---- Overhead: teardown : 2.536280393600464 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 24
+---- Overhead: setup: 0.09922504425048828 seconds ----
+---- Client requests : 1.2113275527954102 seconds ----
+---- Overhead: teardown : 3.046189069747925 seconds ----
+================================
+TEST 2
+Number of nodes: 24
+---- Overhead: setup: 0.08293700218200684 seconds ----
+---- Client requests : 0.9778430461883545 seconds ----
+---- Overhead: teardown : 2.5267488956451416 seconds ----
+================================
+TEST 3
+Number of nodes: 24
+---- Overhead: setup: 0.07570767402648926 seconds ----
+---- Client requests : 1.155458927154541 seconds ----
+---- Overhead: teardown : 4.049225330352783 seconds ----
+================================
+TEST 4
+Number of nodes: 24
+---- Overhead: setup: 0.08127450942993164 seconds ----
+---- Client requests : 1.0439958572387695 seconds ----
+---- Overhead: teardown : 3.5313618183135986 seconds ----
+================================
+TEST 5
+Number of nodes: 24
+---- Overhead: setup: 0.0791778564453125 seconds ----
+---- Client requests : 0.944488525390625 seconds ----
+---- Overhead: teardown : 2.547884225845337 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 32
+---- Overhead: setup: 0.1134192943572998 seconds ----
+---- Client requests : 1.063922643661499 seconds ----
+---- Overhead: teardown : 3.0324482917785645 seconds ----
+================================
+TEST 2
+Number of nodes: 32
+---- Overhead: setup: 0.11618876457214355 seconds ----
+---- Client requests : 1.000678300857544 seconds ----
+---- Overhead: teardown : 3.0317740440368652 seconds ----
+================================
+TEST 3
+Number of nodes: 32
+---- Overhead: setup: 0.10474967956542969 seconds ----
+---- Client requests : 0.8563668727874756 seconds ----
+---- Overhead: teardown : 3.033565044403076 seconds ----
+================================
+TEST 4
+Number of nodes: 32
+---- Overhead: setup: 0.10673117637634277 seconds ----
+---- Client requests : 1.197371244430542 seconds ----
+---- Overhead: teardown : 2.5303196907043457 seconds ----
+================================
+TEST 5
+Number of nodes: 32
+---- Overhead: setup: 0.10439753532409668 seconds ----
+---- Client requests : 0.9287457466125488 seconds ----
+---- Overhead: teardown : 3.033553123474121 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 48
+---- Overhead: setup: 0.17334485054016113 seconds ----
+---- Client requests : 0.988828182220459 seconds ----
+---- Overhead: teardown : 5.070173740386963 seconds ----
+================================
+TEST 2
+Number of nodes: 48
+---- Overhead: setup: 0.1691575050354004 seconds ----
+---- Client requests : 0.9602725505828857 seconds ----
+---- Overhead: teardown : 4.547384738922119 seconds ----
+================================
+TEST 3
+Number of nodes: 48
+---- Overhead: setup: 0.17349481582641602 seconds ----
+---- Client requests : 0.8236899375915527 seconds ----
+---- Overhead: teardown : 5.049733638763428 seconds ----
+================================
+TEST 4
+Number of nodes: 48
+---- Overhead: setup: 0.16316962242126465 seconds ----
+---- Client requests : 1.034299373626709 seconds ----
+---- Overhead: teardown : 5.057151556015015 seconds ----
+================================
+TEST 5
+Number of nodes: 48
+---- Overhead: setup: 0.17838788032531738 seconds ----
+---- Client requests : 0.7737712860107422 seconds ----
+---- Overhead: teardown : 5.051811933517456 seconds ----
+================================
+Test cycle beginning
+================================
+TEST 1
+Number of nodes: 64
+---- Overhead: setup: 0.24080419540405273 seconds ----
+---- Client requests : 1.2184333801269531 seconds ----
+---- Overhead: teardown : 8.0846848487854 seconds ----
+================================
+TEST 2
+Number of nodes: 64
+---- Overhead: setup: 0.2441558837890625 seconds ----
+---- Client requests : 0.7329840660095215 seconds ----
+---- Overhead: teardown : 8.087820291519165 seconds ----
+================================
+TEST 3
+Number of nodes: 64
+---- Overhead: setup: 0.2456965446472168 seconds ----
+---- Client requests : 0.9642620086669922 seconds ----
+---- Overhead: teardown : 8.107878923416138 seconds ----
+================================
+TEST 4
+Number of nodes: 64
+---- Overhead: setup: 0.2984640598297119 seconds ----
+---- Client requests : 1.2512319087982178 seconds ----
+---- Overhead: teardown : 7.07879114151001 seconds ----
+================================
+TEST 5
+Number of nodes: 64
+---- Overhead: setup: 0.24620890617370605 seconds ----
+---- Client requests : 0.9902534484863281 seconds ----
+---- Overhead: teardown : 7.57279109954834 seconds ----
